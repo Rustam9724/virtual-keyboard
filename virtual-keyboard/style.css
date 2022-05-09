@@ -1,0 +1,126 @@
+@-webkit-keyframes pressKey {
+  from {
+    border: 2px solid black;
+  }
+  to {
+    border: 4px solid gray;
+  }
+}
+@keyframes pressKey {
+  from {
+    border: 2px solid black;
+  }
+  to {
+    border: 4px solid gray;
+  }
+}
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 734px;
+}
+
+textarea {
+  width: 702px;
+  margin: 0 auto;
+  height: 104px;
+  border: 2px solid black;
+  margin-bottom: 25px;
+  margin-left: 4px;
+}
+
+.keyboard {
+  width: 702px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-column-gap: 7px;
+          column-gap: 7px;
+  row-gap: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: gray;
+  border: 3px solid black;
+  padding: 5px;
+}
+
+.key {
+  width: 40px;
+  height: 40px;
+  background-color: #37404d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: relative;
+  color: white;
+}
+.key > * {
+  cursor: default;
+}
+.key.key__manage {
+  background-color: #151e2a;
+  color: #787d7f;
+}
+.key.key__manage .manage__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+.key.key__number .top-left-symbol {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  font-size: 12px;
+}
+.key.key__number .center-symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -25%);
+          transform: translate(-50%, -25%);
+  text-align: center;
+}
+.key.key__symbol .center-symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+.key.key_hover {
+  border-width: 2px;
+  -webkit-animation: pressKey 0.1s linear forwards;
+          animation: pressKey 0.1s linear forwards;
+  color: yellow;
+}
+.key:hover {
+  background-color: white;
+  color: #37404d;
+  font-weight: bold;
+  border-width: 2px;
+}
+
+.infoblock {
+  margin: 0 auto;
+}
+.infoblock .infoblock__info {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=style.css.map */
